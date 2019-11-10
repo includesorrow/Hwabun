@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>화분</title>
+</head>
+<body>
+<!-- 상단 -->
+<div class="jumbotron text-center mt-0 mb-0" style="background-color: lightpink;">
+    <img src="{{ url_for('static', filename='logo/3.png') }}" height="50">
+</div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark" >
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">한국어</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">English</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}">中国</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+<!-- 중간 -->
+    <div class="container-fluid">
+        <br>
+        <br>
+            <div class="jumbotron" >
+                <h1 class="display-4">Cosmetic Ingredient Analysis</h1>
+                <p class="lead">Cosmetic analysis service to find harmful ingredients based on deep learning</p>
+                <hr class="my-4">
+                <p>Please upload a photo of your cosmetics.</p>
+                <form action="http://localhost:8000/uploader" method="POST" enctype="multipart/form-data">
+
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile02">
+                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <input type="submit" class="input-group-text" id="inputGroupFileAddon02" value="upload"/>
+                        </div>
+                    </div>
+
+                </form>
+                      
+                <div class="media">
+                    <img src="{{ url_for('static', filename='sample/sample.png') }}" class="mr-3" alt="..." width="100">
+                    <div class="media-body">
+                        <h5 class="mt-0">example</h5>
+                        Upload it like the picture on the left for better recognition.
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+
+<br>
+    <div class="jumbotron text-center mt-0 mb-0" style="background-color: lightpink;">
+            <img src="{{ url_for('static', filename='logo/2.png') }}" height="30">
+            <p>Cosmetic Ingredient Analysis Service HWABOON, Made by <span class="text-primary">MSG</span> / Supported by <span class="text-primary">경희대학교 빅데이터연구센터</span></p>
+    </div>
+</body>
+</html>
