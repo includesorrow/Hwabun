@@ -31,7 +31,7 @@
 
 ![슬라이드13](https://user-images.githubusercontent.com/35910177/83612644-a55da080-a5bd-11ea-84ea-2b86a6f1707b.PNG)
 
-실제로 구현한 기술 목록
+직접 구현한 기술 목록
 
 - Web : Flask
 
