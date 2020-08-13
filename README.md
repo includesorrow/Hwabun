@@ -31,11 +31,12 @@
 
 ![슬라이드13](https://user-images.githubusercontent.com/35910177/83612644-a55da080-a5bd-11ea-84ea-2b86a6f1707b.PNG)
 
-사용 기술
+실제로 구현한 기술 목록
 
 - Web : Flask
 
 - Deep Learning : Keras, AWS SageMaker
+(AWS SageMaker를 통하여 해당 서비스에 필요한 모델을 생성하였습니다.)
 
 - DB : MySQL
 
@@ -80,6 +81,10 @@
 ![슬라이드32](https://user-images.githubusercontent.com/35910177/83616681-194e7780-a5c3-11ea-8850-a6e09cb398f7.PNG)
 
 - 업로드된 화장품 사진을 인식하기 위해 CNN모델을 생성 및 튜닝하는 작업을 진행하였습니다.
+
+### 5. 웹페이지 작업
+
+- 웹페이지에 CNN을 통한 모델링 작업을 한 결과물을 서버에 적용시켜, 사진을 업로드 하였을 때 화장품들의 연관성을 %로 수치화하여 View화 하였습니다.
 
 
 ## 프로젝트 결과
